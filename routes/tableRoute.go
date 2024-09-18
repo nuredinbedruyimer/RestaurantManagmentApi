@@ -1,6 +1,10 @@
 package routes
 
-import "github.com/gin-gonic/gin"
+import (
+	controller "restaurant_manegment_api/controllers"
+
+	"github.com/gin-gonic/gin"
+)
 
 func TableRoutes(tableRoute *gin.Engine) {
 	//  Get All List Of Tables Using GetMethod
