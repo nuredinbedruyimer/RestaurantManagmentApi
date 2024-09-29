@@ -9,14 +9,14 @@ import (
 func FoodRoutes(foodRoutes *gin.Engine) {
 
 	//  Get List of foods
-	foodRoutes.GET("/food", controller.GetFoods())
+	foodRoutes.GET("/foods", controller.GetFoods())
 	//  Get Single Food
-	foodRoutes.GET("/food/:food_id", controller.GetFood())
+	foodRoutes.GET("/foods/:food_id", controller.GetFood())
 
 	//  Create Food
-	foodRoutes.POST("/food", controller.CreateFood())
+	foodRoutes.POST("/foods", controller.CreateFood())
 
 	//  Update Food usng patch
-	foodRoutes.PATCH("/food/:food_id", controller.UpdateFood())
+	foodRoutes.PATCH("/foods/:food_id", controller.UpdateFood())
 
 }

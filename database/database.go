@@ -21,7 +21,8 @@ func DBInstance() *mongo.Client {
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(mongoURL))
 
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("Error In Connectin Database : ", err.Error())
+		log.Panic(err)
 	}
 
 	fmt.Println("Database Connectted Successfully : ")
